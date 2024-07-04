@@ -1,0 +1,137 @@
+.home {
+  &__container {
+    @extend .container;
+    align-items: center;
+    justify-content: space-between;
+    padding: 59rem 0 98rem 135rem;
+
+    @include desktop {
+      padding-left: 75rem;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      padding-right: 75rem;
+      justify-content: center;
+      padding-bottom: 30rem;
+    }
+    @include mobile {
+      padding-left: 40rem;
+      padding-right: 40rem;
+      padding-bottom: 20rem;
+    }
+  }
+
+  &__tag {
+    font-weight: 600;
+    font-size: 17rem;
+    line-height: 86%;
+    padding: 12rem 21rem;
+    margin-bottom: 13rem;
+
+    @include mobile {
+      padding: 6rem 11rem;
+      font-size: 14rem;
+    }
+  }
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 48rem;
+    max-width: 533rem;
+    margin-bottom: 30rem;
+    span {
+      color: var(--yellow-second);
+    }
+
+    @include tablet {
+      font-size: 38rem;
+      margin-bottom: 25rem;
+    }
+
+    @include mobile {
+      font-size: 28rem;
+      max-width: 360rem;
+      margin-bottom: 15rem;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 200%;
+    color: var(--secondary-color);
+    max-width: 497rem;
+
+    @include mobile {
+      font-size: 14rem;
+    }
+  }
+
+  &__group {
+    margin-top: 27rem;
+    display: flex;
+    align-items: center;
+    gap: 26rem;
+    z-index: 3;
+
+    @include mobile {
+      margin-top: 15rem;
+      gap: 10rem;
+    }
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 19rem;
+    padding: 15rem 20rem;
+    border-radius: 48rem;
+    box-shadow: 0 15rem 40rem 0 rgba(249, 213, 128, 0.25);
+    min-width: 146rem;
+
+    @include mobile {
+      font-size: 16rem;
+      min-width: 120rem;
+      padding: 10rem 15rem;
+    }
+  }
+
+  &__play-btn {
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+
+    &-desc {
+      font-weight: 500;
+      font-size: 17rem;
+      line-height: 188%;
+      transition: var(--transition);
+      min-width: 260rem;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  &__play-btn:hover {
+    transform: scale(1.1);
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    z-index: -2;
+    object-fit: cover;
+    object-position: center;
+
+    @include desktop {
+      max-width: 60%;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

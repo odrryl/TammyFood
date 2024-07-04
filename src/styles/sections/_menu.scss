@@ -1,0 +1,17 @@
+.menu {
+  &__container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    padding-top: 67rem;
+
+    @include tablet {
+      padding-top: 40rem;
+    }
+
+    @include mobile {
+      padding-top: 20rem;
+    }
+  }
+}
